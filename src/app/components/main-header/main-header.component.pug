@@ -1,0 +1,25 @@
+.header
+    .header-top-line
+      .title
+        .project-name {{projectName}}
+        .settings-button
+          .dots
+      .header-buttons-block
+        .share
+          .share-avatar(
+            *ngFor="let sharedAvatar in sharedAvatars"
+          )
+            img(src="" alt="Avatar")
+          button.share-button Share
+        .chat
+          button.chat-button Chat
+    nav.menu
+      ul.menu-container
+        li.menu-item(
+          *ngFor="let contentTab in contentTabs"
+        ) {{contentTab}}
+          //router-link.content-menu-link(
+          //  :to="{name: contentTab}"
+          //  active-class="active"
+          //)
+          //  | {{contentTab}}

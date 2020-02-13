@@ -1,0 +1,42 @@
+@mixin square-block($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin circle($size, $color) {
+  min-width: $size;
+  min-height: $size;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin icon($size, $left, $top, $url) {
+  content: "";
+  position: absolute;
+  background: url($url) no-repeat;
+  @include square-block($size);
+  left: $left;
+  top: $top;
+}
+
+@mixin button($color) {
+  cursor: pointer;
+  background-color: $color;
+  border-radius: 15px;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  min-width: 75px;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%dots-button {
+  @extend %flex-center;
+  @include square-block(30px);
+  cursor: pointer;
+  min-width: 30px;
+}

@@ -1,0 +1,27 @@
+.sidebar
+    .logo
+      .logo-name PROJECTUS
+    .main-menu-wrap
+      .user
+        .user-info
+          .user-name {{userName}}
+          .user-role {{userRole}}
+        .user-setting-button
+          .dots
+      .tasks
+        .completed-tasks
+          .task-count {{completedTaskCount}}
+          .task-status Completed Tasks
+        .open-tasks((click)="goToTasks()")
+          .task-count {{openTaskCount}}
+          .task-status Open Tasks
+      nav.main-menu
+        .main-menu-name MENU
+        ul.main-menu-container
+          li.main-menu-item
+            a.main-menu-link(href="#") Home
+          li.main-menu-item
+            a.main-menu-link(href="#") My Tasks
+          li.main-menu-item
+            a.main-menu-link(href="#") Notifications
+              span.count-highlight {{notificationCount}}

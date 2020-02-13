@@ -1,0 +1,9 @@
+@import "~src/styles/variables";
+
+.content-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $content-background;
+  flex: 1 0 auto;
+}
